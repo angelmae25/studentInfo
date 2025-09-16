@@ -1,4 +1,4 @@
-import org.json.JSONObject;
+package models;
 
 public class Subject {
     private String subjectName;
@@ -15,16 +15,6 @@ public class Subject {
     public double getGrade() { return grade; }
     public String getSchedule() { return schedule; }
 
-    public JSONObject toJSON() {
-        JSONObject obj = new JSONObject();
-        obj.put("subjectName", subjectName);
-        obj.put("grade", grade);
-        obj.put("schedule", schedule);
-        return obj;
-    }
-
-    @Override
-    public String toString() {
-        return String.format("%s | Grade: %.2f | Schedule: %s", subjectName, grade, schedule);
-    }
+    public void setGrade(double grade) { this.grade = grade; }
+    public void setSchedule(String schedule) { this.schedule = schedule; }
 }
